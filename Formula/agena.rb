@@ -5,23 +5,23 @@
 class Agena < Formula
   desc "Official CLI for the AGENA platform"
   homepage "https://agena.dev"
-  version "1.1.2"
+  version "1.1.3"
   license "MIT"
 
   depends_on "node" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_darwin_amd64.tar.gz"
-      sha256 "f5496741e0707666959e4638e1ce81c8a11d99efc87d622443f533e96b826f16"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.3/agena_1.1.3_darwin_amd64.tar.gz"
+      sha256 "888d86479838753894b44248fbfa1cba9bb42b86e55d7f8a82f9e3527814c2e6"
 
       define_method(:install) do
         bin.install "agena"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_darwin_arm64.tar.gz"
-      sha256 "7b3c1b9132519b50fde1c2c787e92d6a2027a46674fd7c1ab462b7af993d7ce2"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.3/agena_1.1.3_darwin_arm64.tar.gz"
+      sha256 "97216880f365aff5d4820ba4af9ece04fb0df6bb12d28b62c91135952d9b9ee8"
 
       define_method(:install) do
         bin.install "agena"
@@ -31,15 +31,15 @@ class Agena < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_linux_amd64.tar.gz"
-      sha256 "f73e1de51899f7fea4cd5bbfa3fb63c45ba65a4939a7614b9749469856427dd4"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.3/agena_1.1.3_linux_amd64.tar.gz"
+      sha256 "b1065668b833ac7532048bdc290a3cdfc81eb74a83f51727acb8630098548882"
       define_method(:install) do
         bin.install "agena"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_linux_arm64.tar.gz"
-      sha256 "9429d332b70153296d258c8371c93469e298062f4cd78fd502a337546c430cbc"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.3/agena_1.1.3_linux_arm64.tar.gz"
+      sha256 "dec7e49e9978ff36d50e24bb8c11614b1f85d07ab45fc059684a36974ea3bcf4"
       define_method(:install) do
         bin.install "agena"
       end
@@ -50,7 +50,7 @@ class Agena < Formula
     <<~EOS
       For the full command set while the Go port is in progress, also run:
 
-          npm install -g @agena/cli
+          npm install -g @agenaai/cli
 
       Once Go-native parity lands the npm dependency will go away.
     EOS
