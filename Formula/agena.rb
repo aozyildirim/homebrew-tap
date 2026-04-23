@@ -5,23 +5,23 @@
 class Agena < Formula
   desc "Official CLI for the AGENA platform"
   homepage "https://agena.dev"
-  version "1.1.1"
+  version "1.1.2"
   license "MIT"
 
   depends_on "node" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.1/agena_1.1.1_darwin_amd64.tar.gz"
-      sha256 "36f72ca844d1985797cc389d17c69d2049913aac75736698bb96b85a3d6e3495"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_darwin_amd64.tar.gz"
+      sha256 "f5496741e0707666959e4638e1ce81c8a11d99efc87d622443f533e96b826f16"
 
       define_method(:install) do
         bin.install "agena"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.1/agena_1.1.1_darwin_arm64.tar.gz"
-      sha256 "ec732392d308e16ae324ef2fc1d30b343f8c1ab9b017526cfd40f454e73b816c"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_darwin_arm64.tar.gz"
+      sha256 "7b3c1b9132519b50fde1c2c787e92d6a2027a46674fd7c1ab462b7af993d7ce2"
 
       define_method(:install) do
         bin.install "agena"
@@ -31,15 +31,15 @@ class Agena < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.1/agena_1.1.1_linux_amd64.tar.gz"
-      sha256 "b50fba262c34c164c793e79097a7aba3b1f29c693b85745a4ffd1706d25e5086"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_linux_amd64.tar.gz"
+      sha256 "f73e1de51899f7fea4cd5bbfa3fb63c45ba65a4939a7614b9749469856427dd4"
       define_method(:install) do
         bin.install "agena"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.1/agena_1.1.1_linux_arm64.tar.gz"
-      sha256 "8d7f144585e7200a68491dabe71b5d429becbb3124ecaf684c303f50a54784d7"
+      url "https://github.com/aozyildirim/Agena/releases/download/v1.1.2/agena_1.1.2_linux_arm64.tar.gz"
+      sha256 "9429d332b70153296d258c8371c93469e298062f4cd78fd502a337546c430cbc"
       define_method(:install) do
         bin.install "agena"
       end
